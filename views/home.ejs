@@ -5,7 +5,8 @@
   <h1><%= item.title %></h1>
   <%if (item.body.length > 100) {%>
   <p class="home-paraphs"><%= item.body.substring(0,100) + "..." %></p>
-  <a class="read-more" href="<%= "/posts/" + item.title %>">Read More</a>
+  <a onclick="this.form.submit()" id="link" class="read-more" href="<%= "/posts/" + item._id %>">Read More</a>
+  
   <% } else{ %>
   <p><%= item.body %></p>
   <% } %> <% }) %>
